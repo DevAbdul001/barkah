@@ -10,7 +10,7 @@
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -19,53 +19,51 @@
       align-items: center;
       justify-content: center;
       color: #fff;
-      overflow: hidden;
+      text-align: center;
+      padding: 1rem;
     }
-    
+
     .container {
       position: relative;
       width: 90%;
       max-width: 600px;
-      text-align: center;
       padding: 2rem;
       border-radius: 15px;
       background-color: rgba(0, 0, 0, 0.3);
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-      z-index: 1;
-      overflow: hidden;
     }
-    
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
       font-weight: 300;
       color: #f8f8f8;
     }
-    
+
     p {
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-size: 1rem;
     }
-    
+
     .signature {
       font-family: 'Brush Script MT', cursive;
-      font-size: 1.8rem;
-      margin-top: 2rem;
+      font-size: 1.6rem;
+      margin-top: 1.5rem;
       color: #f3cf7a;
     }
-    
+
     .moon {
       position: absolute;
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      top: -50px;
-      right: -50px;
+      top: -40px;
+      right: -40px;
       background-color: #f3cf7a;
       box-shadow: 0 0 20px #f3cf7a, 0 0 40px #f3cf7a;
     }
-    
+
     .stars {
       position: absolute;
       top: 0;
@@ -74,7 +72,7 @@
       height: 100%;
       z-index: -1;
     }
-    
+
     .star {
       position: absolute;
       width: 2px;
@@ -83,130 +81,117 @@
       border-radius: 50%;
       animation: twinkle 3s infinite ease-in-out;
     }
-    
+
     .lantern {
       position: absolute;
-      width: 30px;
-      height: 50px;
+      width: 25px;
+      height: 40px;
       background-color: rgba(243, 207, 122, 0.7);
       border-radius: 5px;
       box-shadow: 0 0 15px #f3cf7a;
       animation: float 4s infinite ease-in-out;
     }
-    
-    .lantern::before {
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 10px;
-      background-color: rgba(243, 207, 122, 0.9);
-      border-radius: 5px;
-      top: -5px;
-      left: -5px;
-    }
-    
-    .lantern::after {
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 10px;
-      background-color: rgba(243, 207, 122, 0.9);
-      border-radius: 5px;
-      bottom: -5px;
-      left: -5px;
-    }
-    
+
     .lantern1 {
-      left: 10%;
-      top: 20%;
-      animation-delay: 0.5s;
+      left: 5%;
+      top: 10%;
     }
-    
+
     .lantern2 {
-      right: 15%;
-      top: 25%;
-      animation-delay: 1s;
-    }
-    
-    .lantern3 {
-      left: 20%;
-      bottom: 15%;
-      animation-delay: 1.5s;
-    }
-    
-    .lantern4 {
       right: 10%;
-      bottom: 20%;
-      animation-delay: 2s;
+      top: 15%;
     }
-    
+
+    .lantern3 {
+      left: 15%;
+      bottom: 10%;
+    }
+
+    .lantern4 {
+      right: 5%;
+      bottom: 15%;
+    }
+
     .heart {
       display: inline-block;
       animation: heartbeat 1.5s infinite;
       color: #ff6b6b;
     }
-    
+
     @keyframes twinkle {
       0%, 100% { opacity: 0.1; }
       50% { opacity: 1; }
     }
-    
+
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+      50% { transform: translateY(-10px); }
     }
-    
+
     @keyframes heartbeat {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.2); }
     }
-    
+
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
-      
+
       p {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
-      
+
       .signature {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+      }
+
+      .moon {
+        width: 60px;
+        height: 60px;
+        top: -30px;
+        right: -30px;
+      }
+
+      .lantern {
+        width: 20px;
+        height: 35px;
       }
     }
   </style>
 </head>
 <body>
   <div class="stars" id="stars"></div>
-  
+
   <div class="container">
     <div class="moon"></div>
     <div class="lantern lantern1"></div>
     <div class="lantern lantern2"></div>
     <div class="lantern lantern3"></div>
     <div class="lantern lantern4"></div>
-    
+
     <h1>Ramadan Kareem, Habibti</h1>
-    
+
     <p>As the crescent moon appears in the sky and the holy month begins, I find myself thinking of you with every prayer, with every moment of reflection.</p>
-    
+
     <p>May this blessed month fill your heart with peace, your soul with faith, and light. Like the lanterns that illuminate the night, your presence brightens my days and warms my nights.</p>
-    
+
     <p>Though we fast from food and drink, my heart is full because of you. In this month of giving, I'm reminded of the greatest gift I've received - your love.</p>
-    
+
     <p>I pray that Allah showers you with blessings, accepts your prayers, and guides us together on this beautiful journey of life and faith.</p>
-    
+
     <p>My heart <span class="heart">♥</span> beats for you during Ramadan and always.</p>
-    
+
     <div class="signature">With all my love, Abdul</div>
   </div>
-  
+
   <script>
     // Create twinkling stars
     function createStars() {
       const starsContainer = document.getElementById('stars');
-      const starsCount = 100;
-      
+      const starsCount = 80;
+
       for (let i = 0; i < starsCount; i++) {
         const star = document.createElement('div');
         star.className = 'star';
@@ -216,7 +201,7 @@
         starsContainer.appendChild(star);
       }
     }
-    
+
     createStars();
   </script>
 </body>
